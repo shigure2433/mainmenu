@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace mainmenu
 {
@@ -38,6 +39,39 @@ namespace mainmenu
         }
 
         private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (textBox1.Text == "" || textBox2.Text == "")
+            {
+                MessageBox.Show("Username or password cannot be blank.");
+            }
+            else
+            if (textBox1.Text == "1" || textBox2.Text == "1")
+            {
+                this.Hide();
+                main ma = new main();
+                ma.Show();
+            }
+            else 
+            //if (textBox1.Text=="admin" && textBox2.Text=="admin")
+            //{
+            //    this.Hide();
+            //    main ma = new main();
+            //    ma.Show();
+            //}
+            //else
+            {
+                MessageBox.Show("Please check your username or password.");
+            }
+
+            
+        }
+
+        private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
         }

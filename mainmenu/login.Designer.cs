@@ -52,6 +52,8 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(346, 25);
             this.textBox2.TabIndex = 12;
+            this.textBox2.UseSystemPasswordChar = true;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox1
             // 
@@ -97,6 +99,7 @@
             this.button1.TabIndex = 7;
             this.button1.Text = "login";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // login
             // 
@@ -112,7 +115,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Name = "login";
-            this.Text = "Form1";
+            this.Text = "Login";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
