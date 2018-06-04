@@ -44,7 +44,41 @@ namespace mainmenu
 
         private void button5_Click(object sender, EventArgs e)
         {
-            this.Close();
+            this.Hide();
+            login l = new login();
+            l.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Requests r = new Requests();
+            r.Show();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have no right to get in.");
+        }
+
+        private void label1_Click_1(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
+        private void textBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("You have no right to get in.");
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

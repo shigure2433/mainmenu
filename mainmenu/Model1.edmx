@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sdpModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.5" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Cagtegory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="categoryName" Type="varchar" MaxLength="20" />
+          <Property Name="categoryDescription" Type="varchar" MaxLength="50" />
+          <Property Name="inventory" Type="varchar" MaxLength="10" />
+          <Property Name="reason" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemType" Type="varchar" MaxLength="20" />
+          <Property Name="itemID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="itemName" Type="varchar" MaxLength="20" />
+          <Property Name="itemDescription" Type="varchar" MaxLength="30" />
+          <Property Name="remark" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Restaurant">
+          <Key>
+            <PropertyRef Name="RestaurantID" />
+          </Key>
+          <Property Name="RestaurantID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="manager" Type="varchar" MaxLength="20" />
+          <Property Name="Tel no" Type="int" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="StaffName" Type="varchar" MaxLength="20" />
+          <Property Name="password" Type="char" MaxLength="32" />
+          <Property Name="department" Type="varchar" MaxLength="10" />
+          <Property Name="address" Type="varchar" MaxLength="100" />
+          <Property Name="tel no" Type="int" />
+          <Property Name="email" Type="varchar" MaxLength="30" />
+        </EntityType>
+        <EntityType Name="Suplier">
+          <Key>
+            <PropertyRef Name="supplierID" />
+          </Key>
+          <Property Name="supplierID" Type="varchar" MaxLength="10" Nullable="false" />
+          <Property Name="supplierName" Type="varchar" MaxLength="20" />
+          <Property Name="supplierAddress" Type="varchar" MaxLength="50" />
+          <Property Name="ContactPerson" Type="varchar" MaxLength="20" />
+        </EntityType>
+        <EntityContainer Name="sdpModelStoreContainer">
+          <EntitySet Name="Cagtegory" EntityType="Self.Cagtegory" Schema="sdp" store:Type="Tables" />
+          <EntitySet Name="Item" EntityType="Self.Item" Schema="sdp" store:Type="Tables" />
+          <EntitySet Name="Restaurant" EntityType="Self.Restaurant" Schema="sdp" store:Type="Tables" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" Schema="sdp" store:Type="Tables" />
+          <EntitySet Name="Suplier" EntityType="Self.Suplier" Schema="sdp" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sdpModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Cagtegory">
+          <Key>
+            <PropertyRef Name="categoryID" />
+          </Key>
+          <Property Name="categoryID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="categoryName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="categoryDescription" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="inventory" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="reason" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Item">
+          <Key>
+            <PropertyRef Name="itemID" />
+          </Key>
+          <Property Name="itemType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="itemID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="itemName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="itemDescription" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="remark" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Restaurant">
+          <Key>
+            <PropertyRef Name="RestaurantID" />
+          </Key>
+          <Property Name="RestaurantID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="manager" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Tel_no" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Staff">
+          <Key>
+            <PropertyRef Name="staffID" />
+          </Key>
+          <Property Name="staffID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="StaffName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="password" Type="String" MaxLength="32" FixedLength="false" Unicode="false" />
+          <Property Name="department" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="tel_no" Type="Int32" />
+          <Property Name="email" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Suplier">
+          <Key>
+            <PropertyRef Name="supplierID" />
+          </Key>
+          <Property Name="supplierID" Type="String" MaxLength="10" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="supplierName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="supplierAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="ContactPerson" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="sdpEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Cagtegory" EntityType="Self.Cagtegory" />
+          <EntitySet Name="Item" EntityType="Self.Item" />
+          <EntitySet Name="Restaurant" EntityType="Self.Restaurant" />
+          <EntitySet Name="Staff" EntityType="Self.Staff" />
+          <EntitySet Name="Suplier" EntityType="Self.Suplier" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sdpModelStoreContainer" CdmEntityContainer="sdpEntities">
+          <EntitySetMapping Name="Cagtegory">
+            <EntityTypeMapping TypeName="sdpModel.Cagtegory">
+              <MappingFragment StoreEntitySet="Cagtegory">
+                <ScalarProperty Name="categoryID" ColumnName="categoryID" />
+                <ScalarProperty Name="categoryName" ColumnName="categoryName" />
+                <ScalarProperty Name="categoryDescription" ColumnName="categoryDescription" />
+                <ScalarProperty Name="inventory" ColumnName="inventory" />
+                <ScalarProperty Name="reason" ColumnName="reason" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Item">
+            <EntityTypeMapping TypeName="sdpModel.Item">
+              <MappingFragment StoreEntitySet="Item">
+                <ScalarProperty Name="itemType" ColumnName="itemType" />
+                <ScalarProperty Name="itemID" ColumnName="itemID" />
+                <ScalarProperty Name="itemName" ColumnName="itemName" />
+                <ScalarProperty Name="itemDescription" ColumnName="itemDescription" />
+                <ScalarProperty Name="remark" ColumnName="remark" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Restaurant">
+            <EntityTypeMapping TypeName="sdpModel.Restaurant">
+              <MappingFragment StoreEntitySet="Restaurant">
+                <ScalarProperty Name="RestaurantID" ColumnName="RestaurantID" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="manager" ColumnName="manager" />
+                <ScalarProperty Name="Tel_no" ColumnName="Tel no" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Staff">
+            <EntityTypeMapping TypeName="sdpModel.Staff">
+              <MappingFragment StoreEntitySet="Staff">
+                <ScalarProperty Name="staffID" ColumnName="staffID" />
+                <ScalarProperty Name="StaffName" ColumnName="StaffName" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="department" ColumnName="department" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="tel_no" ColumnName="tel no" />
+                <ScalarProperty Name="email" ColumnName="email" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Suplier">
+            <EntityTypeMapping TypeName="sdpModel.Suplier">
+              <MappingFragment StoreEntitySet="Suplier">
+                <ScalarProperty Name="supplierID" ColumnName="supplierID" />
+                <ScalarProperty Name="supplierName" ColumnName="supplierName" />
+                <ScalarProperty Name="supplierAddress" ColumnName="supplierAddress" />
+                <ScalarProperty Name="ContactPerson" ColumnName="ContactPerson" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="無" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
